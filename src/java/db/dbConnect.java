@@ -28,7 +28,7 @@ public class dbConnect {
 
     public dbConnect() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
-        c = DriverManager.getConnection("jdbc:mysql://localhost:3306/ptalk", "root", "incapp123");
+        c = DriverManager.getConnection("jdbc:mysql://localhost:3306/ptalk", "root", "localhost123");
         st = c.createStatement();
         insertUser = c.prepareStatement("insert into user_info values(?,?,?,?,?,?,?,?,?,?)");
         checkLogin = c.prepareStatement("select * from user_info where email=? and password=?");
